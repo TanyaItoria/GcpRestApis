@@ -33,6 +33,12 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5.13</version>
 		</dependency>
+
+			<dependency>
+				<groupId>com.google.apis</groupId>
+				<artifactId>google-api-services-compute</artifactId>
+				<version>v1-rev20210301-1.31.0</version>
+			</dependency>
 	</dependencies>
 
 	<build>
