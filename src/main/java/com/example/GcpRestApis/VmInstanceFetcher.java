@@ -7,10 +7,11 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.compute.Compute;
 import com.google.api.services.compute.model.Instance;
 import com.google.api.services.compute.model.InstanceList;
+import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Arrays;
-import org.springframework.stereotype.Component;
 
 @Component
 public class VmInstanceFetcher {
@@ -35,7 +36,6 @@ public class VmInstanceFetcher {
     public static Compute createComputeService() throws IOException, GeneralSecurityException {
       HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
       JsonFactory jsonFactory = JacksonFactory.getDefaultInstance();
-
       GoogleCredential credential = GoogleCredential.getApplicationDefault();
       if (credential.createScopedRequired()) {
         credential =
@@ -46,4 +46,5 @@ public class VmInstanceFetcher {
           .setApplicationName("Google-ComputeSample/0.1")
           .build();
     }
+
 }

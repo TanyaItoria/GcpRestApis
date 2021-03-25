@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -17,10 +17,29 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+		
+		<dependency>
+			<groupId>com.google.cloud</groupId>
+			<artifactId>google-cloud-storage</artifactId>
+			<version>1.113.14</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+
+
+
+
+
+		<dependency>
+			<groupId>com.google.cloud</groupId>
+			<artifactId>google-cloud-bigquery</artifactId>
+			<version>1.127.10</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -28,19 +47,34 @@
 			<scope>test</scope>
 		</dependency>
 
+
+<!--		<dependency>-->
+<!--			<groupId>com.google.api-client</groupId>-->
+<!--			<artifactId>google-api-client</artifactId>-->
+<!--			<version>1.31.1</version>                             &lt;!&ndash;gcloud-sql-instances-list&ndash;&gt;-->
+<!--		</dependency>-->
+
+
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-sqladmin</artifactId>
+			<version>v1beta4-rev20210310-1.31.0</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.5.13</version>
 		</dependency>
 
-			<dependency>
-				<groupId>com.google.apis</groupId>
-				<artifactId>google-api-services-compute</artifactId>
-				<version>v1-rev20210301-1.31.0</version>
-			</dependency>
-	</dependencies>
 
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-compute</artifactId>
+			<version>v1-rev20210301-1.31.0</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
@@ -49,5 +83,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
